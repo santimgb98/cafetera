@@ -16,7 +16,8 @@
   
   {"BEBIDAS":[
     {"tipo_de_bebida": "expreso","agua": 50,"cafe": 100},
-    {"tipo_de_bebida": "tila","agua": 20}
+    {"tipo_de_bebida": "tila","agua": 20},
+    {"tipo_de_bebida": "solo","agua": 10,"cafe": 50}
   ]
   }
 ]
