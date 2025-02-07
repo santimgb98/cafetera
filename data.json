@@ -1,0 +1,22 @@
+[
+  [
+    {"agua": 1000},
+    {"cafe": 500},
+    {"leche": 300},
+    {"azucar": 100}
+  ],
+
+  [
+    {"agua": 800},
+    {"cafe": 300},
+    {"leche": 100},
+    {"azucar": 50}
+  ],
+
+  
+  {"BEBIDAS":[
+    {"tipo_de_bebida": "expreso","agua": 50,"cafe": 100},
+    {"tipo_de_bebida": "tila","agua": 20}
+  ]
+  }
+]
