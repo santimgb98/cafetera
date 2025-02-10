@@ -16,7 +16,7 @@ class maquina {
   }
 
   bebidas_disponibles() {
-    console.log("BEBIDAS DISPONIBLES: ");
+    console.log("BEBIDAS DISPONIBLESss: ");
     for (let i = 0; i < 2; i++) {
       console.log(i + 1, ".", bebidas.tipo_de_bebida);
     }
