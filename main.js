@@ -7,6 +7,7 @@ const capacidad_maxima = datos[0];
 const estado_inicial = datos[1];
 const bebidas = datos[2];
 
+
 class maquina {
   constructor(agua, cafe, leche, azucar, precio) {
     this.agua = agua;
@@ -147,11 +148,6 @@ class maquina {
     this.leche = leche_inicial + dif_leche;
     this.azucar = azucar_inicial + dif_azucar;
 
-    estado_inicial[0].agua = this.agua;
-    estado_inicial[1].cafe = this.cafe;
-    estado_inicial[2].leche = this.leche;
-    estado_inicial[3].azucar = this.azucar;
-
     const nuevo_estado_inicial = [
       {agua: this.agua},
       {cafe: this.cafe},
@@ -175,16 +171,16 @@ class maquina {
   pedir_bebida() {
     
     console.clear();
-
+    
     // Mostrar bebidas disponibles
     console.log("BEBIDAS DISPONIBLES: ");
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < bebidas.length; i++) {
       console.log(i + 1, ".", bebidas[i].tipo_de_bebida);
     }
 
     let seleccionador_de_bebida = prompt("Selecciona una bebida (por su número): ");
 
-    while (seleccionador_de_bebida > 3 || seleccionador_de_bebida <= 0 || isNaN(seleccionador_de_bebida)===true){
+    while (seleccionador_de_bebida > bebidas.length || seleccionador_de_bebida <= 0 || isNaN(seleccionador_de_bebida)===true){
       seleccionador_de_bebida = prompt("Selecciona una número válido: ");
     }
 
@@ -192,10 +188,26 @@ class maquina {
 
     switch(seleccionador_de_bebida){
       case "1":{
-        estado_inicial[0].agua - 50;
-        estado_inicial[1].cafe - 100;
-        estado_inicial[2].leche - 20;
-        estado_inicial[3].azucar - 20;
+        this.agua = estado_inicial[0].agua - 50;
+        this.cafe = estado_inicial[1].cafe - 100;
+        this.leche = estado_inicial[2].leche - 20;
+        this.azucar = estado_inicial[3].azucar - 20;
+
+        const nuevo_estado_inicial = [
+          {agua: this.agua},
+          {cafe: this.cafe},
+          {leche: this.leche},
+          {azucar: this.azucar}
+        ];
+
+        // Anidamos en una misma variable todos los apartados del JSON 
+        const all_json = [capacidad_maxima,nuevo_estado_inicial,bebidas];
+
+        // Convertir el array actualizado de vuelta a formato JSON
+        const datosparseados = JSON.stringify(all_json, null, 2);
+
+        // Escribir el contenido actualizado en el archivo
+        fs.writeFileSync(ruta, datosparseados, 'utf8');
 
         console.log("Sirviendo bebida...");
         console.log(`
@@ -210,10 +222,26 @@ class maquina {
 
       }break;
       case "2":{
-        estado_inicial[0].agua - 20;
-        estado_inicial[1].cafe;
-        estado_inicial[2].leche;
-        estado_inicial[3].azucar;
+        this.agua = estado_inicial[0].agua - 20;
+        this.cafe = estado_inicial[1].cafe;
+        this.leche = estado_inicial[2].leche;
+        this.azucar = estado_inicial[3].azucar;
+
+        const nuevo_estado_inicial = [
+          {agua: this.agua},
+          {cafe: this.cafe},
+          {leche: this.leche},
+          {azucar: this.azucar}
+        ];
+
+        // Anidamos en una misma variable todos los apartados del JSON 
+        const all_json = [capacidad_maxima,nuevo_estado_inicial,bebidas];
+
+        // Convertir el array actualizado de vuelta a formato JSON
+        const datosparseados = JSON.stringify(all_json, null, 2);
+
+        // Escribir el contenido actualizado en el archivo
+        fs.writeFileSync(ruta, datosparseados, 'utf8');
 
         console.log("Sirviendo bebida...");
         console.log(`
@@ -227,10 +255,26 @@ class maquina {
         
       }break;
       case "3":{
-        estado_inicial[0].agua - 10;
-        estado_inicial[1].cafe - 50;
-        estado_inicial[2].leche;
-        estado_inicial[3].azucar;
+        this.agua = estado_inicial[0].agua - 10;
+        this.cafe = estado_inicial[1].cafe - 50;
+        this.leche = estado_inicial[2].leche;
+        this.azucar = estado_inicial[3].azucar;
+
+        const nuevo_estado_inicial = [
+          {agua: this.agua},
+          {cafe: this.cafe},
+          {leche: this.leche},
+          {azucar: this.azucar}
+        ];
+
+        // Anidamos en una misma variable todos los apartados del JSON 
+        const all_json = [capacidad_maxima,nuevo_estado_inicial,bebidas];
+
+        // Convertir el array actualizado de vuelta a formato JSON
+        const datosparseados = JSON.stringify(all_json, null, 2);
+
+        // Escribir el contenido actualizado en el archivo
+        fs.writeFileSync(ruta, datosparseados, 'utf8');
 
         console.log("Sirviendo bebida...");
         console.log(`
@@ -246,9 +290,6 @@ class maquina {
       }break;
     }
 
-
-
-    // JSON
   }
 
   salir(){

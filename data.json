@@ -15,16 +15,16 @@
   ],
   [
     {
-      "agua": 800
+      "agua": 1000
     },
     {
-      "cafe": 300
+      "cafe": 500
     },
     {
-      "leche": 100
+      "leche": 300
     },
     {
-      "azucar": 50
+      "azucar": 100
     }
   ],
   [
@@ -48,6 +48,22 @@
       "cafe": 50,
       "leche": 0,
       "azucar": 0
+    },
+    {
+      "tipo_de_bebida": "cocacola",
+      "agua": 90,
+      "cafe": 0,
+      "leche": 9,
+      "azucar": 15,
+      "precio_euros": 3
+    },
+    {
+      "tipo_de_bebida": "cacaolat",
+      "agua": 0,
+      "cafe": 0,
+      "leche": 50,
+      "azucar": 19,
+      "precio_euros": 1.9
     }
   ]
 ]
