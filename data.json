@@ -64,6 +64,14 @@
       "leche": 50,
       "azucar": 19,
       "precio_euros": 1.9
+    },
+    {
+      "tipo_de_bebida": "agua",
+      "agua": 90,
+      "cafe": 0,
+      "leche": 9,
+      "azucar": 0,
+      "precio_euros": 0.9
     }
   ]
 ]

@@ -22,7 +22,7 @@ class maquina {
     console.clear();
 
     console.log("BEBIDAS DISPONIBLES: ");
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < bebidas.length; i++) {
       console.log(i + 1, ".", bebidas[i].tipo_de_bebida);
     }
   }
