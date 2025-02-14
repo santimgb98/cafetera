@@ -22,7 +22,7 @@ class maquina {
     console.clear();
 
     console.log("BEBIDAS DISPONIBLES: ");
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < bebidas.length; i++) {
       console.log(i + 1, ".", bebidas[i].tipo_de_bebida);
     }
   }
@@ -32,12 +32,12 @@ class maquina {
     console.clear();
 
     console.log("EL ESTADO DE LA MÁQUINA ES: ");
-    
-    console.log("Agua: ",estado_inicial[0].agua);
-    console.log("Café: ",estado_inicial[1].cafe);
-    console.log("Leche: ",estado_inicial[2].leche);
-    console.log("Azúcar: ",estado_inicial[3].azucar);
-   
+
+    console.log("Agua: ", estado_inicial[0].agua);
+    console.log("Café: ", estado_inicial[1].cafe);
+    console.log("Leche: ", estado_inicial[2].leche);
+    console.log("Azúcar: ", estado_inicial[3].azucar);
+
   }
 
   nueva_bebida() {
@@ -185,6 +185,22 @@ class maquina {
     }
 
     console.clear();
+
+    /*for(let i = 0; i < bebidas.length; i++){
+      this.agua = estado_inicial[0].agua - bebidas[i].agua;
+      this.cafe = estado_inicial[1].cafe - bebidas[i].cafe;
+      this.leche = estado_inicial[2].leche - bebidas[i].leche;
+      this.azucar = estado_inicial[3].azucar - bebidas[i].azucar;
+
+      const nuevo_estado_inicial = [
+        {agua: this.agua},
+        {cafe: this.cafe},
+        {leche: this.leche},
+        {azucar: this.azucar}
+      ];
+    }*/
+
+
 
     switch(seleccionador_de_bebida){
       case "1":{
