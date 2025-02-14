@@ -312,6 +312,18 @@ class maquina {
     console.clear();
     process.exit();
   }
+
+  servicio_tecnico(){
+    
+    console.clear();
+    console.log("LLAMANDO......");
+    console.log("..............");
+    console.log("..............");
+    console.log("..............");
+    console.log("..............");
+    console.log("..............");
+    console.log("*comunicando..*")
+  }
 }
 
 let x = new maquina(300, 500, 300, 200, 2);
@@ -320,20 +332,38 @@ let x = new maquina(300, 500, 300, 200, 2);
 let y = 1;
 while(y = 1){
 
-  console.log("--------------------------------");
-  console.log("BIENVENIDO A LA MÁQUINA DE CAFÉ");
-  console.log("--------------------------------");
-  console.log("Seleccione una opción: ");
-  console.log("1. BEBIDAS DISPONIBLES");
-  console.log("2. ESTADO DE LA MÁQUINA");
-  console.log("3. NUEVA BEBIDA");
-  console.log("4. RECARGAR MÁQUINA");
-  console.log("5. PEDIR BEBIDA");
-  console.log("6. SALIR");
+  console.log(" _____________________________________ ");
+  console.log("|                                     |");
+  console.log("|           MÁQUINA DE CAFÉ           |");
+  console.log("|_____________________________________|");
+  console.log("|              ( (    ) )             |");
+  console.log("|               ) )  ( (              |");
+  console.log("|       _______________________       |");
+  console.log("|      |1. BEBIDAS DISPONIBLES |      |");
+  console.log("|      |_______________________|      |");
+  console.log("|      |2. ESTADO DE MÁQUINA   |      |");
+  console.log("|      |_______________________|      |");
+  console.log("|      |3. NUEVA BEBIDA        |      |");
+  console.log("|      |_______________________|      |");
+  console.log("|      |4. RECARGAR MÁQUINA    |      |");
+  console.log("|      |_______________________|      |");
+  console.log("|      |5. PEDIR BEBIDA        |      |");
+  console.log("|      |_______________________|      |");
+  console.log("|      |6. SALIR               |      |");
+  console.log("|      |_______________________|      |");
+  console.log("|             |   ☕   |              |");
+  console.log("|          =================          |");
+  console.log("|         |     CAFETERA    |         |");
+  console.log("|         |_________________|         |");
+  console.log("|        Pulsa 7 para llamar al       |");
+  console.log("|           servicio técnico          |");
+  console.log("|_____________________________________|");
+  
+
 
   let opcion = prompt("Selecciona una opción de la máquina (por su número): ");
 
-  while (isNaN(opcion) == true || opcion <= 0 || opcion > 6){
+  while (isNaN(opcion) == true || opcion <= 0 || opcion > 7){
     opcion = prompt("Selecciona una opción válida de la máquina (por su número): ");
   }
 
@@ -356,6 +386,9 @@ while(y = 1){
     case "6":{
       x.salir();
     }break;
+    case "7":{
+      x.servicio_tecnico();
+    }
   }
 
 }
