@@ -48,6 +48,33 @@
       "cafe": 50,
       "leche": 0,
       "azucar": 0
+<<<<<<< HEAD
+=======
+    },
+    {
+      "tipo_de_bebida": "cocacola",
+      "agua": 90,
+      "cafe": 0,
+      "leche": 9,
+      "azucar": 15,
+      "precio_euros": 3
+    },
+    {
+      "tipo_de_bebida": "cacaolat",
+      "agua": 0,
+      "cafe": 0,
+      "leche": 50,
+      "azucar": 19,
+      "precio_euros": 1.9
+    },
+    {
+      "tipo_de_bebida": "agua",
+      "agua": 90,
+      "cafe": 0,
+      "leche": 9,
+      "azucar": 0,
+      "precio_euros": 0.9
+>>>>>>> 1e2eb4da5024da244f5400cbd27ce78243878590
     }
   ]
 ]
